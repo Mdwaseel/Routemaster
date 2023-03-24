@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Location</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" integrity="sha384-VzLXTJGPSyTLX6d96AxgkKvE/LRb7ECGyTxuwtpjHnVWVZs2gp5RDjeM/tgBnVdM" crossorigin="anonymous">
+  <style>
+    #map { height: 400px; }
+  </style>
+</head>
+<body>
+  <!-- <h1>Live Location</h1>
+  <p>This page shows the live location of the user who shared their location.</p> -->
+  <div id="map"></div>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-RFZC58YeKApoNsIbBxf4z6JJXmh+geBSgkCQXFyh+4tiFSJmJBt+2FbjxW7Ar16M" crossorigin="anonymous"></script>
+  <script>
+    var map = L.map('map').setView([17.5958, 78.4526], 16);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+maxZoom: 19
+}).addTo(map);
+var marker = L.marker([17.5958, 78.4526]).addTo(map);
+function updateLocation() {
+var xhr = new XMLHttpRequest();
+xhr.open('GET', '/store-location.php?latitude=17.5958&longitude=78.4526');
+xhr.onreadystatechange = function() {
+if (xhr.readyState === XMLHttpRequest.DONE) {
+if (xhr.status === 200) {
+var locationData = JSON.parse(xhr.responseText);
+var latitude = locationData.latitude;
+var longitude = locationData.longitude;
+marker.setLatLng([latitude, longitude]);
+map.setView([latitude, longitude], 16);
+} else {
+console.error('Failed to get location data');
+}
+}
+};
+xhr.send();
+}
+setInterval(updateLocation, 5000); // update every 5 seconds
+</script>
+
+</body>
+</html>

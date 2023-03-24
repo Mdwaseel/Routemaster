@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Share Your Location</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css">
+  <style>
+    #map { height: 400px; };
+  </style>
+</head>
+<body>
+  <button id="share-location-button">Share Location</button>
+  <div id="map"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([0, 0], 2);
+    var marker = L.marker([0, 0]).addTo(map);
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+                marker.setLatLng([latitude, longitude]).update();
+                map.setView([latitude, longitude], map.getZoom());
+                updateLocation(latitude, longitude);
+            }, function(error) {
+                console.log(error);
+            });
+        } else {
+            console.log("Geolocation is not supported by this browser.");
+        }
+    }
+
+    // Add a click event listener to the Share Location button
+    $('#share-location-button').click(function() {
+        // Get the user's current location and update the marker position
+        getLocation();
+        // Send the location to the server every 5 seconds
+        setInterval(getLocation, 5000);
+    });
+
+    function updateLocation(latitude, longitude) {
+        $.ajax({
+            url: "store-location.php",
+            type: "GET",
+            data: {
+                latitude: latitude,
+                longitude: longitude
+            },
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(xhr, status, error) {
+                console.log(xhr.responseText);
+            }
+        });
+    }
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+        maxZoom: 19
+    }).addTo(map);
+  </script>
+</body>
+</html>
