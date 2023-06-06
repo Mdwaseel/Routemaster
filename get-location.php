@@ -1,4 +1,4 @@
-<?php
+y<?php
 // Connect to the database or file system where location data is stored
 // Replace the placeholders below with the actual credentials for your database or file system
 // Connect to the database or file system where location data is stored
