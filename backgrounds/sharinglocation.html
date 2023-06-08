@@ -19,53 +19,49 @@
     var marker = L.marker([0, 0]).addTo(map);
     var latitude, longitude; // declare the variables in the global scope
     function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      latitude = position.coords.latitude; // assign the values to the global variables
-      longitude = position.coords.longitude;
-      marker.setLatLng([latitude, longitude]).update();
-      map.setView([latitude, longitude], map.getZoom());
-    }, function(error) {
-      console.log(error);
-    });
-  } else {
-    console.log("Geolocation is not supported by this browser.");
-  }
-}
-
-// Add a click event listener to the Share Location button
-$('#share-location-button').click(function() {
-  // Get the user's current location and update the marker position
-  getLocation();
-  // Send the location to the server every 5 seconds
-  setInterval(updateLocation, 5000);
-});
-
-function updateLocation() {
-  $.ajax({
-    url: "store-location.php",
-    type: "GET",
-    data: {
-        latitude: latitude,
-        longitude: longitude
-    },
-    success: function(response) {
-        console.log(response);
-    },
-    error: function(xhr, status, error) {
-        console.log(xhr.responseText);
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          latitude = position.coords.latitude; // assign the values to the global variables
+          longitude = position.coords.longitude;
+          marker.setLatLng([latitude, longitude]).update();
+          map.setView([latitude, longitude], map.getZoom());
+        }, function(error) {
+          console.log(error);
+        });
+      } else {
+        console.log("Geolocation is not supported by this browser.");
+      }
     }
-});
 
+    // Add a click event listener to the Share Location button
+    $('#share-location-button').click(function() {
+      // Get the user's current location and update the marker position
+      getLocation();
+      // Send the location to the server every 5 seconds
+      setInterval(updateLocation, 5000);
+    });
 
+    function updateLocation() {
+      $.ajax({
+        url: "store-location.php",
+        type: "GET",
+        data: {
+            latitude: latitude,
+            longitude: longitude
+        },
+        success: function(response) {
+            console.log(response);
+        },
+        error: function(xhr, status, error) {
+            console.log(xhr.responseText);
+        }
+      });
+    }
 
-
-}
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-  maxZoom: 19
-}).addTo(map);
-</script>
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+      maxZoom: 19
+    }).addTo(map);
+  </script>
 </body>
 </html>
