@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, insitial-scale=1.0">
     <title>Student Login</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="/login.css">
@@ -22,28 +22,7 @@
                 <button type="submit" class="sbt" onclick="signIn()">Login</button> <br>
             </div>
         </div>
-        <script>
-            const authenticateUser = () => {
-                const email = document.getElementById("email").value;
-                const password = document.getElementById("password").value;
-                
-                // Add your authentication logic here
-                if (email === "demo11@gmail.com" && password === "demo123") {
-                    // Authentication successful
-                    alert("Authentication successful");
-                    window.location.href = "/user.html";
-                    // Redirect to a different page or perform other actions
-                } else {
-                    // Authentication failed
-                    alert("Incorrect email or password");
-                    // Display an error message on the form or perform other actions
-                }
-            };
-            
-            const signIn = () => {
-                authenticateUser();
-            };
-        </script>
+        <script src="/signup.js"></script>
     </div>
 </body>
 </html>
