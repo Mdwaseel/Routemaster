@@ -113,6 +113,9 @@ body{
         left: 10.5vw;
         top: -10vw;
     }
+    .lgncnt{
+        left: 2vw;
+    }
 }
 
 /* Small Devices (landscape phones) */
