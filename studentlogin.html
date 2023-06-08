@@ -3,26 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, insitial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Login</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="/login.css">
     <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-auth-compat.js"></script>
 </head> 
 <body>
     <div class="container">
         <img src="/imgs/8-4.png" alt="" class="back">
         <div class="lgnfr">
             <div class="lgncnt">
+                
+
                 <img src="/imgs/Student.jpg" alt="" height="200" width="300">
                 <input type="text" placeholder="Enter Your College Mail" id="email"> <br>
-                <input type="password" placeholder="Password" id="password" > <br>
-                <button type="submit" class="sbt" onclick="signIn()">Login</button> <br>
+            <input type="password" placeholder="Password" id="password" > <br>
+            <!-- <input type="button" value="Login" class="sbt"> <br> -->
+            <button type="submit" class="sbt" onclick="signIn()">Login</button> <br>
+            
+
+
             </div>
+            
         </div>
-        <script src="/signup.js"></script>
+        <script>
+            function signIn() {
+                var email = document.getElementById('email').value;
+                var password = document.getElementById('password').value;
+                
+                // Add your authentication logic here
+                if (email === 'demo@gmail.com' && password === '12345') {
+                    alert("Loggeed In " + email);
+                    window.location.assign("/user.html");
+                } else {
+                    alert('Invalid email or password');
+                }
+            }
+        </script>
+        <!-- <script src="/signup.js"></script> -->
     </div>
 </body>
 </html>
