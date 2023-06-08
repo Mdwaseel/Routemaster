@@ -1,5 +1,4 @@
-// Install the twilio npm package before using this code
-// npm install twilio
+
 
 const accountSid = 'ACa0bd8bd12a7c556a1ce3665461b41ae3';
 const authToken = 'fbc38e6dc27433bfecdc135cf3674953';
