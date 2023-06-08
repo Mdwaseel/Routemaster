@@ -21,7 +21,7 @@ header img{
     width: 113px;
   
     position: relative;
-    top: 4vw;
+    top: 2.5vw;
     left: 2vw;
     font-family: 'Lalezar';
     font-style: normal;
@@ -34,6 +34,9 @@ header img{
     border-radius: 13px;
 }
 
+.route{
+    visibility: hidden;
+}
 
 .routelist a{
     text-decoration: none;
@@ -59,9 +62,9 @@ header img{
 .container{
     width: 80%;
     height: 65%;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     position: absolute;
-    right: 3vw;
+    right: 4vw;
     top: 14vw;
 
 }
@@ -80,4 +83,314 @@ header img{
     color: black;
     font-weight: 600;
 
+}
+
+
+
+/* Extra Small Devices (portrait phones) */
+@media (max-width: 576px) {
+    .routelist{
+        visibility: hidden;
+    }
+    .container{
+        top: 28vw;
+        width: 94%;
+    }
+    .route{
+        visibility: visible;
+        width: 50%;
+        background-color: #37473f;
+        text-align: center;
+        padding: 10px;
+        border-radius: 12px;
+        margin: auto;
+        margin-top: 3vw ;
+
+        
+    }
+    .route h3{
+        color: white;
+        font-family: 'Anton', sans-serif;
+        font-size: 18px;
+    }
+
+    .route select{
+        margin-top: 8px;
+        border-radius: 4px;
+        border: black;
+        font-family: 'Lalezar';
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    background-color: #d1c23a;
+    text-align: center;
+    }
+  
+
+  }
+  
+  /* Small Devices (landscape phones) */
+  @media (min-width: 576px) and (max-width: 768px) {
+    .routelist{
+        visibility: hidden;
+    }
+    .container{
+        top: 26vw;
+        width: 94%;
+    }
+    .route{
+        visibility: visible;
+        width: 50%;
+        background-color: #37473f;
+        text-align: center;
+        padding: 10px;
+        border-radius: 12px;
+        margin: auto;
+        margin-top: 3vw ;
+
+        
+    }
+    .route h3{
+        color: white;
+        font-family: 'Anton', sans-serif;
+        font-size: 18px;
+    }
+
+    .route select{
+        margin-top: 8px;
+        border-radius: 4px;
+        border: black;
+        font-family: 'Lalezar';
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    background-color: #d1c23a;
+    text-align: center;
+    }
+  
+
+  }
+  
+  /* Medium Devices (tablets) */
+  @media (min-width: 768px) and (max-width: 992px) {
+    .routelist{
+        visibility: hidden;
+    }
+    .container{
+        top: 39vw;
+        width: 94%;
+    }
+    .route{
+        visibility: visible;
+        width: 50%;
+        background-color: #37473f;
+        text-align: center;
+        padding: 10px;
+        border-radius: 12px;
+        margin: auto;
+        margin-top: 10vw ;
+
+        
+    }
+    .route h3{
+        color: white;
+        font-family: 'Anton', sans-serif;
+        font-size: 18px;
+    }
+
+    .route select{
+        margin-top: 8px;
+        border-radius: 4px;
+        border: black;
+        font-family: 'Lalezar';
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    background-color: #d1c23a;
+    text-align: center;
+    }
+  
+
+  }
+  
+  /* Large Devices (desktops) */
+  @media (min-width: 992px) and (max-width: 1200px) {
+    .routelist{
+        top: 1vw;
+    }
+    .container{
+        height: 81%;
+    }
+  }
+  
+  /* Extra Large Devices (large desktops) */
+  @media (min-width: 1200px) {
+    /* Styles for screens larger than 1200px */
+  }
+  
+  /* Extra Small Devices (portrait phones) */
+@media (max-width: 320px) {
+    .routelist{
+        visibility: hidden;
+    }
+    .container{
+        top: 56vw;
+        width: 94%;
+        height: 71%;
+    }
+    .route{
+        visibility: visible;
+        width: 52%;
+        background-color: #37473f;
+        text-align: center;
+        padding: 10px;
+        border-radius: 12px;
+        margin: auto;
+        margin-top: 13vw ;
+
+        
+    }
+    .route h3{
+        color: white;
+        font-family: 'Anton', sans-serif;
+        font-size: 10px;
+        
+    }
+
+    .route select{
+        margin-top: 8px;
+        border-radius: 4px;
+        border: black;
+        font-family: 'Lalezar';
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    background-color: #d1c23a;
+    text-align: center;
+    font-size: 10px;
+    }
+  
+  }
+  
+  /* Extra Small Devices (portrait phones) */
+  @media (min-width: 321px) and (max-width: 375px) {
+    .routelist{
+        visibility: hidden;
+    }
+    .container{
+        top: 49vw;
+        width: 94%;
+        height: 70%
+    }
+    .route{
+        visibility: visible;
+        width: 52%;
+        background-color: #37473f;
+        text-align: center;
+        padding: 10px;
+        border-radius: 12px;
+        margin: auto;
+        margin-top: 12vw ;
+
+        
+    }
+    .route h3{
+        color: white;
+        font-family: 'Anton', sans-serif;
+        font-size: 14px;
+        
+    }
+
+    .route select{
+        margin-top: 8px;
+        border-radius: 4px;
+        border: black;
+        font-family: 'Lalezar';
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    background-color: #d1c23a;
+    text-align: center;
+    }
+  
+  }
+  
+  /* Extra Small Devices (portrait phones) */
+  @media (min-width: 376px) and (max-width: 414px) {
+    .routelist{
+        visibility: hidden;
+    }
+    .container{
+        top: 42vw;
+        width: 94%;
+        height: 75%
+    }
+    .route{
+        visibility: visible;
+        width: 52%;
+        background-color: #37473f;
+        text-align: center;
+        padding: 10px;
+        border-radius: 12px;
+        margin: auto;
+        margin-top: 9vw ;
+
+        
+    }
+    .route h3{
+        color: white;
+        font-family: 'Anton', sans-serif;
+        font-size: 14px;
+        
+    }
+
+    .route select{
+        margin-top: 8px;
+        border-radius: 4px;
+        border: black;
+        font-family: 'Lalezar';
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    background-color: #d1c23a;
+    text-align: center;
+    }
+  }
+  
+
+  @media (min-width: 415px) and (max-width: 575px) {
+    .routelist {
+        visibility: hidden;
+    }
+    .container {
+        top: 34vw;
+        width: 94%;
+        height: 70%;
+    }
+    .route {
+        visibility: visible;
+        width: 52%;
+        background-color: #37473f;
+        text-align: center;
+        padding: 10px;
+        border-radius: 12px;
+        margin: auto;
+        margin-top: 6vw;
+    }
+    .route h3 {
+        color: white;
+        font-family: 'Anton', sans-serif;
+        font-size: 14px;
+    }
+    .route select {
+        margin-top: 8px;
+        border-radius: 4px;
+        border: black;
+        font-family: 'Lalezar';
+        font-style: normal;
+        font-weight: bold;
+        text-align: center;
+        background-color: #d1c23a;
+        text-align: center;
+    }
 }

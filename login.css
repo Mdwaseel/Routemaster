@@ -61,11 +61,11 @@ body{
     left: 3vw;
 }
 .lgncnt img{
-    width: 36%;
-    height: 41%;
+    width: 45%;
+    height: 50%;
     position: absolute;
-    left: 4.5vw;
-    top: -6vw;
+    left: 4vw;
+    top: -5vw;
 }
 
 .lgnfr button{
@@ -87,4 +87,204 @@ body{
     position: relative;
    right: -17.5vw;
    
+}
+
+
+/* Extra Small Devices (portrait phones) */
+@media (max-width: 576px) {
+    body{
+        background: url(/imgs/back2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .back {
+        display: none;
+    }
+    .container {
+        height: 34vw;
+        margin-top: 24vw;
+    }
+    .lgnfr {
+        width: 100%;
+    }
+    .lgncnt img {
+        width: 36%;
+        height: 48%;
+        left: 10.5vw;
+        top: -10vw;
+    }
+}
+
+/* Small Devices (landscape phones) */
+@media (min-width: 576px) and (max-width: 768px) {
+    .container {
+        height: 34vw;
+        margin-top: 24vw;
+    }
+    .lgnfr {
+        width: 50%;
+    }
+    .lgncnt img {
+        width: 36%;
+        height: 48%;
+        left: 10.5vw;
+        top: -10vw;
+    }
+}
+
+/* Medium Devices (tablets) */
+@media (min-width: 768px) and (max-width: 992px) {
+    .container {
+        margin-top: 50vw;
+    }
+    .lgncnt {
+        top: 13vw;
+        left: 2vw;
+    }
+    .lgncnt img {
+        width: 39%;
+        left: 5.5vw;
+        top: -8vw;
+    }
+    .container input {
+        width: 82%;
+        font-size: 11px;
+    }
+}
+
+/* Large Devices (desktops) */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .container {
+        margin-top: 11vw;
+    }
+    .lgncnt {
+        left: 2vw;
+    }
+    .lgncnt img {
+        width: 36%;
+        left: 5.5vw;
+        top: -6vw;
+    }
+    .container input {
+        width: 84%;
+        font-size: 14px;
+        font-family: 'Lalezar';
+    }
+}
+
+/* Extra Large Devices (large desktops) */
+@media (min-width: 1200px) {
+    .lgncnt {
+        top: 12vw;
+        left: 3vw;
+    }
+    .lgncnt img {
+        width: 48%;
+        height: 54%;
+        left: 4vw;
+        top: -6vw;
+    }
+}
+
+/* Extra Small Devices (portrait phones) */
+@media (max-width: 320px) {
+    body {
+        background: url(/imgs/back2.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100vh; /* Set body height to fill the viewport */
+    }
+    .container {
+        width: 65%;
+        height: 69vw;
+        margin-top: 58vw;
+    }
+    .lgncnt {
+        top: 23vw;
+    }
+    .lgncnt img {
+        left: 18.5vw;
+        top: -19vw;
+    }
+}
+
+/* Extra Small Devices (portrait phones) */
+@media (min-width: 321px) and (max-width: 375px) {
+    body {
+        background: url(/imgs/back2.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100vh; /* Set body height to fill the viewport */
+    }
+    .container {
+        width: 57%;
+        height: 63vw;
+        margin-top: 58vw;
+    }
+    .lgncnt {
+        top: 23vw;
+    }
+    .lgnfr button {
+        margin-left: 31%;
+    }
+    .lgncnt img {
+        left: 17.5vw;
+        top: -18vw;
+    }
+}
+
+/* Extra Small Devices (portrait phones) */
+@media (min-width: 376px) and (max-width: 414px) {
+    body {
+        background: url(/imgs/back2.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100vh; /* Set body height to fill the viewport */
+    }
+    .container {
+        width: 58%;
+        height: 59vw;
+        margin-top: 81vw;
+    }
+    .lgncnt {
+        top: 23vw;
+        left: 6vw;
+    }
+    .lgncnt img {
+        left: 15.5vw;
+        top: -18vw;
+    }
+    .lgnfr button {
+        margin-left: 31%;
+    }
+}
+
+@media (min-width: 415px) and (max-width: 575px){
+    body {
+        background: url(/imgs/back2.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100vh; /* Set body height to fill the viewport */
+    }
+    .container {
+        width: 45%;
+        height: 46vw;
+        margin-top: 46vw;
+    }
+    .lgncnt {
+        top: 17vw;
+        left: 6vw;
+    }
+    .lgncnt img {
+        left: 11.5vw;
+        top: -13vw;
+    }
+    .lgnfr button {
+        margin-left: 31%;
+    }
+
 }

@@ -1,125 +1,178 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #2c2b2b;
-    font-family: Arial, sans-serif;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-  .route i{
-    color: #7fd212;
-  }
+body {
+  background-color: #2c2b2b;
+  font-family: Arial, sans-serif;
+}
 
-  .route span{
-    color: #cfc13a;
-  }
-  
-  header {
-    background-color: #37473f;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-  }
-  
-  h1 {
-    font-size: 2rem;
-    color: white;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  h1 span {
-    font-weight: bold;
-  }
-  
-  nav ul {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-  }
-  
-  
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.5rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  nav a:hover {
-    background-color: #d1c23a;
-    color: black;
-  }
-  
-  main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 4rem);
-  }
-  
-  .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 80%;
-    padding: 2rem;
-    background-color: #37473f;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-  }
-  
-  .conthead h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  
-  .user1,
-  .user2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .user1 img,
-  .user2 img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    border-radius: 5px;
-  }
-  
-  a {
-    color: #37473f;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.5rem;
-    border: 2px solid #37473f;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  a:hover {
-    background-color: #37473f;
-    background-color: whitesmoke;
-    color: black;
-  }
-  
-  .route{
-    position: relative;
-  }
-  .list{
-    top: 2vw;
+.route i {
+  color: #7fd212;
+}
+
+.route span {
+  color: #cfc13a;
+}
+
+header {
+  background-color: #37473f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+h1 span {
+  font-weight: bold;
+}
+
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #d1c23a;
+  color: black;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 4rem);
+}
+
+.container {
+  padding: 2rem;
+  background-color: #37473f;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.conthead h2 {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 2rem;
+  line-height: 42px;
+  text-align: center;
+}
+
+.user1,
+.user2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.user1 img,
+.user2 img {
+  width: 50%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+
+
+.container a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem;
+  border: 2px solid #37473f;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  background-color: #cfc13a;
+}
+
+a:hover {
+  background-color: #37473f;
+  background-color: whitesmoke;
+  color: black;
+}
+
+.route {
+  position: relative;
+}
+
+.list {
+  top: 2vw;
   right: 2vw;
   position: absolute;
+}
+
+@media (max-width: 768px) {
+  .user1,
+  .user2 {
+    width: 90%;
   }
+  .list{
+    top: 3.5vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .conthead h2 {
+    font-size: 21px;
+    line-height: 36px;
+}
+
+  .user1,
+  .user2 {
+    width: 100%;
+  }
+
+  .user1 img{
+    width: 40%;
+  }
+  
+  .user2 img{
+    width: 40%;
+  }
+
+  .list{
+    top: 5vw;
+  }
+  .route h1{
+    font-size: 24px;
+    
+    gap: 9px;
+}
+  
+ 
+}
+
+
