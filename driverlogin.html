@@ -27,6 +27,20 @@
             
         </div>
     </div>
-     <script src="/driversignup.js"></script>
+    <script>function signIn() {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        
+        // Add your authentication logic here
+        if (email === 'demo@gmail.com' && password === '12345') {
+            alert("Loggeed In " + email);
+            window.location.assign("/driverus1.html");
+        } else {
+            alert('Invalid email or password');
+        }
+    }
+</script>
+
+     <!-- <script src="/driversignup.js"></script> -->
 </body>
 </html>
