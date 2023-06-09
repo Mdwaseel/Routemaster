@@ -1,46 +1,46 @@
 * {
     padding: 0;
     margin: 0;
-}
-
-body {
+  }
+  
+  body {
     background-color: #2c2b2b;
     font-family: 'Anton', sans-serif;
-}
-
-header {
+  }
+  
+  header {
     background-color: #37473f;
     font-family: 'Lalezar';
     font-style: normal;
     font-weight: 400;
     font-size: 25px;
-}
-
-.route {
+  }
+  
+  .route {
     line-height: 6vw;
     padding-left: 5vw;
     float: left;
-}
-
-.route h1 {
+  }
+  
+  .route h1 {
     color: white;
-}
-
-.fa-bus {
+  }
+  
+  .fa-bus {
     color: #6dae1d;
-}
-
-.route span {
+  }
+  
+  .route span {
     color: #d1c23a;
-}
-
-header ul li a {
+  }
+  
+  header ul li a {
     color: #d1c23a;
     text-decoration: none;
     padding-left: 30px;
-}
-
-.list {
+  }
+  
+  .list {
     position: absolute;
     right: 72px;
     top: 32px;
@@ -48,21 +48,21 @@ header ul li a {
     font-style: normal;
     font-weight: 400;
     font-size: 25px;
-}
-
-header ul li {
+  }
+  
+  header ul li {
     display: flex;
     float: right;
-}
-
-.login {
+  }
+  
+  .login {
     background-color: rgb(81, 131, 81);
     color: white;
     padding: 5px;
     border-radius: 5px;
-}
-
-.container {
+  }
+  
+  .container {
     font-family: 'Lalezar';
     font-style: normal;
     font-weight: 400;
@@ -75,31 +75,31 @@ header ul li {
     width: 50%;
     height: 26vw;
     border-radius: 23px;
-}
-
-.container img {
+  }
+  
+  .container img {
     padding-top: 8px;
-}
-
-.container h2 {
+  }
+  
+  .container h2 {
     color: white;
     padding-top: 1.5vw;
-}
-
-.options {
+  }
+  
+  .options {
     padding-top: 3vw;
-}
-
-.options select {
+  }
+  
+  .options select {
     text-align: center;
     border: none;
     font-size: 20px;
     font-family: 'Lalezar';
     padding: 7px;
     border-radius: 6px;
-}
-
-.options button {
+  }
+  
+  .options button {
     text-align: center;
     border: none;
     font-size: 20px;
@@ -108,205 +108,196 @@ header ul li {
     margin-left: 10px;
     background-color: #d1c23a;
     border-radius: 6px;
-}
-
-/* Media Queries */
-
-@media screen and (max-width: 768px) {
+  }
+  
+  /* Media Queries */
+  
+  @media screen and (max-width: 768px) {
     header {
-        height: 10vw;
+      height: 10vw;
     }
-
+  
     .route {
-        line-height: 10vw;
+      line-height: 10vw;
     }
-
+  
     .list {
-        top: 48px;
-        font-size: 20px;
+      top: 48px;
+      font-size: 20px;
     }
-
+  
     .container {
-        width: 80%;
-        height: 42vw;
-        top: vw;
+      width: 80%;
+      height: 42vw;
+      top: vw;
     }
-
+  
     .container h2 {
-        padding-top: 3vw;
+      padding-top: 3vw;
     }
-
+  
     .options {
-        padding-top: 6vw;
+      padding-top: 6vw;
     }
-
+  
     .options select {
-        font-size: 16px;
-        padding: 5px;
+      font-size: 16px;
+      padding: 5px;
     }
-
+  
     .options button {
-        font-size: 16px;
-        padding: 4px;
-        margin-left: 5px;
+      font-size: 16px;
+      padding: 4px;
+      margin-left: 5px;
     }
-}
-
-@media screen and (max-width: 480px) {
+  }
+  
+  @media screen and (max-width: 480px) {
     header {
-        height: 12vw;
+      height: 12vw;
     }
-
+  
     .route {
-        line-height: 12vw;
+      line-height: 12vw;
     }
-
+  
     .list {
-        top: 56px;
-        font-size: 18px;
+      top: 56px;
+      font-size: 18px;
     }
-
+  
     .container {
-        width: 90%;
-        height: 88vw;
-        top: 15vw;
+      width: 90%;
+      height: 88vw;
+      top: 15vw;
     }
-
+  
     .container h2 {
-        padding-top: 4vw;
-        font-size: 18px;
+      padding-top: 4vw;
+      font-size: 18px;
     }
-
+  
     .options {
-        padding-top: 8vw;
+      padding-top: 8vw;
     }
-
+  
     .options select {
-        font-size: 14px;
-        padding: 4px;
+      font-size: 14px;
+      padding: 4px;
     }
-
+  
     .options button {
-        font-size: 14px;
-        padding: 1px;
-        margin-left: 4px;
+      font-size: 14px;
+      padding: 1px;
+      margin-left: 4px;
     }
-
-
-
-    @media (max-width: 1200px) {
-        /* Adjust styles for screens up to 1200px */
-        header {
-            height: 8vw;
-            font-size: 20px;
-        }
-        
-        .route {
-            line-height: 8vw;
-        }
-        
-        .container {
-            font-size: 20px;
-            height: 30vw;
-        }
-        
-        .container h2 {
-            padding-top: 2vw;
-        }
+  }
+  
+  @media (max-width: 1200px) {
+    /* Adjust styles for screens up to 1200px */
+    header {
+      height: 8vw;
+      font-size: 20px;
     }
     
-    @media (max-width: 992px) {
-        /* Adjust styles for screens up to 992px */
-        header {
-            height: 10vw;
-            font-size: 18px;
-        }
-        
-        .route {
-            line-height: 10vw;
-        }
-        
-        .container {
-            font-size: 18px;
-            height: 34vw;
-        }
-        
-        .container h2 {
-            padding-top: 2.5vw;
-        }
+    .route {
+      line-height: 8vw;
     }
     
-    @media (max-width: 768px) {
-        /* Adjust styles for screens up to 768px */
-        header {
-            height: 12vw;
-            font-size: 16px;
-        }
-        
-        .route {
-            line-height: 12vw;
-        }
-        
-        .container {
-            font-size: 16px;
-            height: 38vw;
-        }
-        
-        .container h2 {
-            padding-top: 3vw;
-        }
+    .container {
+      font-size: 20px;
+      height: 30vw;
     }
     
-    @media (max-width: 576px) {
-        /* Adjust styles for screens up to 576px */
-        header {
-            height: 14vw;
-            font-size: 14px;
-        }
-        
-        .route {
-            line-height: 14vw;
-        }
-        
-        .container {
-            font-size: 14px;
-            height: 88vw;
-        }
-        
-        .container h2 {
-            padding-top: 3.5vw;
-        }
+    .container h2 {
+      padding-top: 2vw;
     }
+  }
+  
+  @media (max-width: 992px) {
+    /* Adjust styles for screens up to 992px */
+    header {
+      height: 10vw;
+      font-size: 18px;
     }
-
-
-    @media only screen and (max-width: 576px) {
-        .container {
-            width: 80%;
-            height: 53vw;
-            top: 16vw;
-        }
-      }
-
-
-      @media only screen and (min-width: 768px){
-        .container {
-            width: 42%;
-            height: 30vw;
-            top: 8vw;
-        }
-        
-      }
-
-
-      @media only screen and (min-width: 992px){
-        .container {
-    width: 42%;
-    height: 26vw;
-    top: 12vw;
-}
-      }
-
-      @media only screen and (min-width: 1200px){
-
-      }
+    
+    .route {
+      line-height: 10vw;
+    }
+    
+    .container {
+      font-size: 18px;
+      height: 34vw;
+    }
+    
+    .container h2 {
+      padding-top: 2.5vw;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Adjust styles for screens up to 768px */
+    header {
+      height: 12vw;
+      font-size: 16px;
+    }
+    
+    .route {
+      line-height: 12vw;
+    }
+    
+    .container {
+      font-size: 16px;
+      height: 38vw;
+    }
+    
+    .container h2 {
+      padding-top: 3vw;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    /* Adjust styles for screens up to 576px */
+    header {
+      height: 14vw;
+      font-size: 14px;
+    }
+    
+    .route {
+      line-height: 14vw;
+    }
+    
+    .container {
+      font-size: 14px;
+      height: 88vw;
+    }
+    
+    .container h2 {
+      padding-top: 3.5vw;
+    }
+  }
+  
+  @media only screen and (max-width: 576px) {
+    .container {
+      width: 80%;
+      height: 53vw;
+      top: 16vw;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .container {
+      width: 42%;
+      height: 30vw;
+      top: 8vw;
+    }
+  }
+  
+  @media only screen and (min-width: 992px) {
+    .container {
+      width: 42%;
+      height: 26vw;
+      top: 12vw;
+    }
+  }
+  
